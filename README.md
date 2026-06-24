@@ -14,3 +14,16 @@
 - 把 `your.name@example.com` 替换成真实邮箱。
 - 把 `#` 链接替换为 PDF、GitHub、Google Scholar、CV 等真实地址。
 - 如果使用 GitHub Pages，保持这些文件在仓库根目录即可。
+
+## GitHub
+
+推荐仓库名：`wjp20050817`
+
+远程地址示例：
+
+```bash
+git remote add origin https://github.com/smithgun2005/wjp20050817.git
+git push -u origin main
+```
+
+推送后可以在 GitHub 仓库的 Settings -> Pages 中选择 `main` 分支和根目录发布网页。

@@ -4,7 +4,6 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const publications = document.querySelectorAll("[data-publication-list] .publication");
 const copyEmailButton = document.querySelector("[data-copy-email]");
-const languageButtons = document.querySelectorAll("[data-lang-set]");
 const toast = document.querySelector("[data-toast]");
 const year = document.querySelector("[data-year]");
 
@@ -21,37 +20,21 @@ const showToast = (message) => {
   }, 2200);
 };
 
-const setLanguage = (language) => {
-  document.body.dataset.lang = language;
-  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-  languageButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.langSet === language);
-  });
-  localStorage.setItem("site-language", language);
-};
-
 setHeaderState();
 year.textContent = new Date().getFullYear();
-setLanguage(localStorage.getItem("site-language") || "en");
 
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 navToggle.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
-  navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  navToggle.setAttribute("aria-label", isOpen ? "关闭导航" : "打开导航");
 });
 
 nav.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
+  if (event.target.matches("a")) {
     nav.classList.remove("is-open");
-    navToggle.setAttribute("aria-label", "Open navigation");
+    navToggle.setAttribute("aria-label", "打开导航");
   }
-});
-
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setLanguage(button.dataset.langSet);
-  });
 });
 
 filterButtons.forEach((button) => {
@@ -68,11 +51,10 @@ filterButtons.forEach((button) => {
 
 copyEmailButton.addEventListener("click", async () => {
   const email = copyEmailButton.dataset.copyEmail;
-  const isChinese = document.body.dataset.lang === "zh";
 
   try {
     await navigator.clipboard.writeText(email);
-    showToast(isChinese ? `已复制：${email}` : `Copied: ${email}`);
+    showToast(`已复制：${email}`);
   } catch {
     showToast(email);
   }

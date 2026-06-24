@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="学生个人学术主页模板，包含个人简介、研究方向、发表论文、项目经历和联系方式。"
+    />
+    <title>你的姓名 | Student Academic Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">YN</span>
+        <span>
+          <strong>你的姓名</strong>
+          <small>Student Researcher</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="打开导航" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="#about">简介</a>
+        <a href="#research">研究</a>
+        <a href="#publications">论文</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/academic-workspace.png" alt="学术工作台、笔记本电脑、论文和研究笔记" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Undergraduate / Master Student · Research Portfolio</p>
+          <h1 id="hero-title">你的姓名</h1>
+          <p class="hero-subtitle">
+            某某大学某某学院学生，关注 <strong>人工智能、数据科学与人机交互</strong>。
+            这里可以改成你的研究兴趣、导师、实验室和正在申请的方向。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="#publications">查看论文</a>
+            <a class="button ghost" href="mailto:your.name@example.com">联系我</a>
+          </div>
+          <dl class="quick-facts" aria-label="个人概览">
+            <div>
+              <dt>学校</dt>
+              <dd>某某大学</dd>
+            </div>
+            <div>
+              <dt>方向</dt>
+              <dd>AI · HCI · Data</dd>
+            </div>
+            <div>
+              <dt>状态</dt>
+              <dd>开放合作</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section intro-band" id="about" aria-labelledby="about-title">
+        <div class="section-grid">
+          <div>
+            <p class="section-kicker">About</p>
+            <h2 id="about-title">自我介绍</h2>
+          </div>
+          <div class="prose">
+            <p>
+              我是一名对研究和工程实现都感兴趣的学生，目前主要探索机器学习模型如何服务真实场景中的决策、学习和协作。
+              我喜欢把开放问题拆成可验证的小实验，也重视清晰写作、可复现实验和易用工具。
+            </p>
+            <p>
+              你可以在这里写：年级、专业、导师、实验室、研究关键词、正在寻找的机会，以及一句更有个人气质的学术动机。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <p class="section-kicker">Research</p>
+          <h2 id="research-title">研究方向</h2>
+        </div>
+        <div class="interest-grid">
+          <article class="tile">
+            <span class="tile-index">01</span>
+            <h3>可信机器学习</h3>
+            <p>模型解释性、鲁棒性评估、数据偏差分析，以及面向实际应用的可靠 AI 系统设计。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-index">02</span>
+            <h3>人机交互</h3>
+            <p>研究智能工具如何嵌入学习、写作和创作流程，关注用户体验、可控性和协作效率。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-index">03</span>
+            <h3>数据驱动教育</h3>
+            <p>从学习数据中发现行为模式，并构建支持个性化反馈与教学改进的分析方法。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section muted" id="publications" aria-labelledby="pub-title">
+        <div class="section-heading with-tools">
+          <div>
+            <p class="section-kicker">Publications</p>
+            <h2 id="pub-title">论文与预印本</h2>
+          </div>
+          <div class="filter-group" role="group" aria-label="筛选论文类型">
+            <button class="filter-button active" type="button" data-filter="all">全部</button>
+            <button class="filter-button" type="button" data-filter="paper">论文</button>
+            <button class="filter-button" type="button" data-filter="preprint">预印本</button>
+          </div>
+        </div>
+
+        <div class="publication-list" data-publication-list>
+          <article class="publication" data-type="paper">
+            <div class="pub-year">2026</div>
+            <div class="pub-body">
+              <h3>用于学生学习行为建模的轻量级多模态方法</h3>
+              <p><strong>你的姓名</strong>, 合作者 A, 合作者 B</p>
+              <p class="venue">Conference / Journal Name · Under Review</p>
+              <div class="pub-links">
+                <a href="#" aria-label="查看论文 PDF">PDF</a>
+                <a href="#" aria-label="查看代码">Code</a>
+                <a href="#" aria-label="查看项目页面">Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication" data-type="preprint">
+            <div class="pub-year">2025</div>
+            <div class="pub-body">
+              <h3>面向研究写作的 AI 辅助反馈系统：一项用户研究</h3>
+              <p><strong>你的姓名</strong>, 合作者 C</p>
+              <p class="venue">arXiv Preprint</p>
+              <div class="pub-links">
+                <a href="#" aria-label="查看预印本">arXiv</a>
+                <a href="#" aria-label="查看演示">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="publication" data-type="paper">
+            <div class="pub-year">2024</div>
+            <div class="pub-body">
+              <h3>数据可视化在课程学习诊断中的应用探索</h3>
+              <p><strong>你的姓名</strong>, 指导老师</p>
+              <p class="venue">Student Research Symposium · Best Poster Candidate</p>
+              <div class="pub-links">
+                <a href="#" aria-label="查看海报">Poster</a>
+                <a href="#" aria-label="查看幻灯片">Slides</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section two-column" id="projects" aria-labelledby="projects-title">
+        <div>
+          <p class="section-kicker">Projects</p>
+          <h2 id="projects-title">项目与经历</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-date">2025 - Now</span>
+            <h3>实验室科研助理</h3>
+            <p>参与数据清洗、实验设计、模型评估和论文写作，维护可复现实验记录。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2024</span>
+            <h3>课程项目：智能文献管理工具</h3>
+            <p>设计从文献导入、标签整理到阅读笔记生成的工作流，并完成可交互原型。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2023</span>
+            <h3>学生科研训练计划</h3>
+            <p>围绕教育数据分析完成开题、实验与结题展示，积累了研究方法训练。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section profile-strip" aria-labelledby="education-title">
+        <div class="profile-block">
+          <p class="section-kicker">Education</p>
+          <h2 id="education-title">教育背景</h2>
+          <p>某某大学 · 某某专业 · 学士 / 硕士在读</p>
+          <p>GPA、奖学金、交换经历、助教经历都可以放在这里。</p>
+        </div>
+        <div class="profile-block">
+          <p class="section-kicker">Service</p>
+          <h2>学术服务</h2>
+          <p>学生助教、读书会组织者、开源贡献者、会议志愿者。</p>
+          <p>也可以替换成竞赛、获奖或技能列表。</p>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">欢迎交流</h2>
+          <p>
+            如果你对我的研究、项目或合作机会感兴趣，可以通过邮件联系我。
+            也可以把这里改成 GitHub、Google Scholar、ORCID、知乎或个人博客链接。
+          </p>
+        </div>
+        <div class="contact-actions">
+          <button class="button primary" type="button" data-copy-email="your.name@example.com">复制邮箱</button>
+          <a class="button secondary" href="#">下载 CV</a>
+          <a class="button secondary" href="#">GitHub</a>
+          <a class="button secondary" href="#">Scholar</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span data-year></span> 你的姓名. Built for a student academic portfolio.</p>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
